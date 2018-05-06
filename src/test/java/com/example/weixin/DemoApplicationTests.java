@@ -1,5 +1,7 @@
 package com.example.weixin;
 
+import com.example.weixin.model.AccessToken;
+import com.example.weixin.utils.WeiXinUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

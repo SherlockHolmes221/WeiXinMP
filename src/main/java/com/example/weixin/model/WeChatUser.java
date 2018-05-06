@@ -1,41 +1,49 @@
 package com.example.weixin.model;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class WeChatUser {
 
     @Id
     @GeneratedValue
     private Integer id;
-    private String  openId;
 
-    public User() {
+
+    private String  openid;
+
+    public WeChatUser() {
     }
 
 
-    public User(String openId) {
-        this.openId = openId;
+    public WeChatUser(String openId) {
+        this.openid = openId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getOpenId() {
-        return openId;
+        return openid;
     }
 
     public void setOpenId(String openId) {
-        this.openId = openId;
+        this.openid = openId;
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "WeChatUser{" +
                 "id=" + id +
-                ", openId='" + openId + '\'' +
+                ", openId='" + openid + '\'' +
                 '}';
     }
 }
